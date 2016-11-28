@@ -1,1 +1,1 @@
-include ':app',':codescanlib'
+include ':app',':qrcodelib'
