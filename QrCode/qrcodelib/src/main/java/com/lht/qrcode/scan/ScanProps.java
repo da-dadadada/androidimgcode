@@ -7,11 +7,10 @@ import com.zbar.lib.decode.InactivityTimer;
 import java.util.HashMap;
 
 /**
+ * ScanProps 关键配置
+ *
  * @author leobert.lan
  * @version 1.0
- * @ClassName: ScanProps
- * @Description: 关键配置
- * @date 2016年3月15日 下午1:28:12
  */
 public class ScanProps {
 

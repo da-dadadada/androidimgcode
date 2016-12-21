@@ -1,9 +1,6 @@
 package com.lht.qrcode.scan;
-/** 
- * @ClassName: IScanResultHandler 
- * @Description: 扫描结果处理
- * @date 2016年3月15日 下午1:53:08
- *  
+/**
+ *  IScanResultHandler 扫描结果处理接口
  * @author leobert.lan
  * @version 1.0
  */

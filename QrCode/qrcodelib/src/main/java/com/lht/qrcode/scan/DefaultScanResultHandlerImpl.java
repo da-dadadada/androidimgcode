@@ -4,11 +4,8 @@ import android.util.Log;
 
 import com.lht.qrcode.scan.IScanResultHandler;
 
-/** 
- * @ClassName: DefaultScanResultHandlerImpl 
- * @Description: 默认的处理类
- * @date 2016年3月15日 下午1:56:15
- *  
+/**
+ * 默认的扫码结果处理类
  * @author leobert.lan
  * @version 1.0
  */

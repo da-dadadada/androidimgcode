@@ -1,9 +1,7 @@
 package com.lht.qrcode;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.graphics.Bitmap;
 
 import com.lht.qrcode.decode.QRCodeDecoder;
@@ -12,13 +10,11 @@ import com.lht.qrcode.scan.IScanResultHandler;
 import com.lht.qrcode.scan.ScanActivity;
 import com.lht.qrcode.scan.ScanProps;
 
-import java.lang.ref.WeakReference;
-
 /**
  * <p><b>Package</b> com.lht.qrcode
  * <p><b>Project</b> QrCode
  * <p><b>Classname</b> QRCodeFacade
- * <p><b>Description</b>: TODO
+ * <p><b>Description</b>: 封装了部分业务场景
  * <p>Created by leobert on 2016/11/1.
  */
 

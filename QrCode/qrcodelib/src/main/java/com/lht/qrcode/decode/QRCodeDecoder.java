@@ -1,7 +1,6 @@
 package com.lht.qrcode.decode;
 
 import android.graphics.Bitmap;
-import android.util.Log;
 
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.ChecksumException;
@@ -21,11 +20,10 @@ import java.util.HashMap;
  * <p><b>Description</b>: TODO
  * <p>Created by leobert on 2016/11/1.
  */
-
 public class QRCodeDecoder {
 
     /**
-     * 小心 oom问题，TODO 优化
+     * 小心 oom问题，需要优化
      * @param bitmap
      * @return
      */
@@ -41,7 +39,6 @@ public class QRCodeDecoder {
 
         try {
             Result result = reader.decode(bitmap1, hints);
-            Log.d("lmsg", "decode:" + result.getText());
             return result.getText();
         } catch (ChecksumException | FormatException | NotFoundException e) {
             e.printStackTrace();

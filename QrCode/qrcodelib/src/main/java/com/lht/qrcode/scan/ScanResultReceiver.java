@@ -5,10 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 
 /**
- * @ClassName: ScanResultReceiver
- * @Description: 接收扫描结果
- * @date 2016年3月15日 下午1:47:39
- * 
+ * ScanResultReceiver 接收扫描结果
  * @author leobert.lan
  * @version 1.0
  */
