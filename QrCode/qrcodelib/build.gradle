@@ -125,14 +125,20 @@ install {
 }
 
 Properties properties = new Properties()
-boolean isHasFile = false
-if (project.rootProject.findProject('local.properties') != null){
-    isHasFile = true
-    properties.load(project.rootProject.file('local.properties').newDataInputStream())
-}
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//boolean isHasFile = false
+//if (project.rootProject.findProject('local.properties') != null){
+//    isHasFile = true
+//    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//}
 bintray {
-    user = isHasFile ? properties.getProperty("bintray.user") : System.getenv("bintray.user")
-    key = isHasFile ? properties.getProperty("bintray.apikey") : System.getenv("bintray.apikey")
+//    user = isHasFile ? properties.getProperty("bintray_user") : System.getenv("bintray.user")
+//    key = isHasFile ? properties.getProperty("bintray_apikey") : System.getenv("bintray.apikey")
+
+    user =  properties.getProperty("bintray_user")
+    key = properties.getProperty("bintray_apikey")
+
+
     configurations = ['archives']
     pkg {
         repo = "maven"
