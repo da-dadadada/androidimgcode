@@ -9,6 +9,16 @@ public class ScanActivity extends CaptureActivity implements Callback {
     public static final String KEY_HANDLER = "_handler";
 
     @Override
+    protected void onManualGrantPermissionRefuse() {
+        Intent intent = new Intent();
+        intent.setAction(BROADCAST_ACTION);
+        intent.putExtra(RESULT_CODE, SCAN_CAMERA_GRANT_REFUSE);
+        intent.putExtra(RESULT, "");
+        intent.putExtra(KEY_HANDLER,getIntent().getStringExtra(KEY_HANDLER));
+        sendBroadcast(intent);
+    }
+
+    @Override
     public void handleDecode(String resultString) {
         super.handleDecode(resultString);
         if (resultString.equals("")) {
@@ -19,7 +29,6 @@ public class ScanActivity extends CaptureActivity implements Callback {
             intent.putExtra(KEY_HANDLER,getIntent().getStringExtra(KEY_HANDLER));
             sendBroadcast(intent);
         } else {
-            // TODO
             Intent intent = new Intent();
             intent.setAction(BROADCAST_ACTION);
             intent.putExtra(RESULT_CODE, SCAN_OK);
@@ -55,5 +64,10 @@ public class ScanActivity extends CaptureActivity implements Callback {
     public static final int SCAN_TIMEOUT = 3;
 
     public static final int SCAN_CANCEL = 4;
+
+    /**
+     * 用户拒绝进行手动授权
+     */
+    public static final int SCAN_CAMERA_GRANT_REFUSE = 5;
 
 }

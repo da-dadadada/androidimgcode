@@ -8,13 +8,13 @@ import java.util.concurrent.TimeUnit;
 
 import android.app.Activity;
 
-/** 
- * @ClassName: InactivityTimer 
- * @Description: 倒计时类，当计时结束没有完成扫描即关闭，返回扫描超时
- * @date 2016年3月11日 上午10:53:14
- *  
- * @author leobert.lan
- * @version 1.0 
+/**
+ *  <p><b>Package</b> com.zbar.lib.decode
+ * <p><b>Project</b> QrCode
+ * <p><b>Classname</b> InactivityTimer
+ * <p><b>Description</b>: 倒计时类，当计时结束没有完成扫描即关闭，返回扫描超时
+ *
+ * Created by leobert on 2016/3/11.
  */
 public final class InactivityTimer {
 

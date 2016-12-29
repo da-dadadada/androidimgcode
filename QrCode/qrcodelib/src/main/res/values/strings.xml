@@ -3,5 +3,8 @@
 
     <string name="app_name">CodeScanLib</string>
     <string name="scan_tips">将二维码/条码放入框内，即可自动扫描</string>
+    <string name="camera_grant_message">未拥有相机使用权限，如需进行扫码，请手动设置权限允许</string>
+    <string name="ok">去设置</string>
+    <string name="cancel">放弃</string>
 
 </resources>

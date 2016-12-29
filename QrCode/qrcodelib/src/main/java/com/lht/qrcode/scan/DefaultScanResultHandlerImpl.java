@@ -2,8 +2,6 @@ package com.lht.qrcode.scan;
 
 import android.util.Log;
 
-import com.lht.qrcode.scan.IScanResultHandler;
-
 /**
  * 默认的扫码结果处理类
  * @author leobert.lan
@@ -31,6 +29,11 @@ public final class DefaultScanResultHandlerImpl implements IScanResultHandler {
 	@Override
 	public void onCancel() {
 		Log.d(tag, "scan canceled by user");
+	}
+
+	@Override
+	public void onManualGrantPermissionRefuse() {
+		Log.d(tag, "refuse camera grant");
 	}
 
 }

@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -57,21 +56,6 @@ public class MainActivity extends Activity {
         findViewById(R.id.btn_decode).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                File qr = getQrcode();
-//                if (!qr.exists()) {
-//                    Log.e("lmsg","not found:"+qr.getAbsolutePath());
-//                    return;
-//                }
-//                try {
-//                    InputStream input = new FileInputStream(qr);
-//                    byte[] byt = new byte[input.available()];
-//                    input.read(byt);
-//
-//                    String s = QRCodeDecoder.decode(convertBytes2Bimap(byt));
-//                    Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
                 Intent openAlbumIntent = new Intent(Intent.ACTION_GET_CONTENT);
                 openAlbumIntent.setType("image/*");
                 startActivityForResult(openAlbumIntent, 1001);
@@ -89,13 +73,7 @@ public class MainActivity extends Activity {
 
     }
 
-    private File getQrcode() {
-        File root = Environment.getExternalStorageDirectory();
-        File qr = new File(root.getAbsolutePath() + "/Qrcode/Qrcode.jpg");
-        return qr;
-    }
-
-    private Bitmap convertBytes2Bimap(byte[] b) {
+    private Bitmap convertBytes2Bitmap(byte[] b) {
         if (b.length == 0) {
             return null;
         }
@@ -115,7 +93,7 @@ public class MainActivity extends Activity {
                             byte[] byt = new byte[input.available()];
                             input.read(byt);
 
-                            String s = QRCodeDecoder.decode(convertBytes2Bimap(byt));
+                            String s = QRCodeDecoder.decode(convertBytes2Bitmap(byt));
                             Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -155,6 +133,11 @@ public class MainActivity extends Activity {
 
         @Override
         public void onCancel() {
+            Log.d(tag, "scan canceled by user");
+        }
+
+        @Override
+        public void onManualGrantPermissionRefuse() {
             Log.d(tag, "scan canceled by user");
         }
 

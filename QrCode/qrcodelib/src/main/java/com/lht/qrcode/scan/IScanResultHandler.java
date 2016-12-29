@@ -14,4 +14,6 @@ public interface IScanResultHandler {
 	
 	void onCancel();
 
+	void onManualGrantPermissionRefuse();
+
 }

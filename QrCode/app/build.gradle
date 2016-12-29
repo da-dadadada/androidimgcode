@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.0"
+    compileSdkVersion 24
+    buildToolsVersion "23.0.3"
     defaultConfig {
         applicationId "abc.efg.qrcode"
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 24
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -19,20 +19,14 @@ android {
     }
 }
 
-//repositories {
-//    flatDir {
-//        dirs 'libs'
-//    }
-//}
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-//    compile(name:'qrcodelib-release-1.1.0', ext:'aar')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:23.+'
+    compile 'com.android.support:appcompat-v7:24.+'
     testCompile 'junit:junit:4.12'
-//    compile project(':qrcodelib')
-    compile 'individual.leobert.libs:qrcodelib:1.1.1'
+    compile project(':qrcodelib')
+//    compile 'individual.leobert.libs:qrcodelib:1.1.1'
 }

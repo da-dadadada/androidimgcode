@@ -17,7 +17,7 @@ import java.util.HashMap;
  * <p><b>Package</b> com.lht.qrcode.decode
  * <p><b>Project</b> QrCode
  * <p><b>Classname</b> QRCodeDecoder
- * <p><b>Description</b>: TODO
+ * <p><b>Description</b>: decode the qr-code or zebra-code in bitmap
  * <p>Created by leobert on 2016/11/1.
  */
 public class QRCodeDecoder {
