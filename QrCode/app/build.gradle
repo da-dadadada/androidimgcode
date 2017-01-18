@@ -27,6 +27,6 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:24.+'
     testCompile 'junit:junit:4.12'
-    compile project(':qrcodelib')
-//    compile 'individual.leobert.libs:qrcodelib:1.1.1'
+//    compile project(':qrcodelib')
+    compile 'individual.leobert.libs:qrcodelib:1.1.2'
 }

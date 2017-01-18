@@ -7,13 +7,8 @@ import android.os.IBinder;
 import android.util.Log;
 
 /** 
- * @ClassName: FlashlightManager 
- * @Description: 闪光灯管理
- * @date 2016年3月11日 上午10:51:41
- *  
+ * FlashlightManager 闪光灯管理
  * @author leobert.lan
- * @version 1.0 
- * @since JDK 1.6 
  */
 final class FlashlightManager {
 

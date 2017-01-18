@@ -11,10 +11,8 @@ import android.view.SurfaceHolder;
 
 
 /** 
- * @ClassName: CameraManager 
- * @Description: TODO
- * @date 2016年3月11日 上午10:51:21
- *  
+ * CameraManager
+ *
  * @author leobert.lan
  * @version 1.0 
  */
